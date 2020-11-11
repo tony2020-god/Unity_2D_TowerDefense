@@ -93,6 +93,7 @@ public class BattleManager : MonoBehaviour
 
     public void NextLv()
     {
+        LVsave.lastLV = LVsave.lastLV + 1;
         StartCoroutine(Endloadingimage());
     }
 

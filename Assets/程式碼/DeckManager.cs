@@ -137,7 +137,7 @@ public class DeckManager : MonoBehaviour
     {
         
         //SceneManager.LoadScene("關卡1");  //載入場景
-        AsyncOperation ao = SceneManager.LoadSceneAsync("關卡1");
+        AsyncOperation ao = SceneManager.LoadSceneAsync("關卡"+ LVsave.lastLV);
 
         ao.allowSceneActivation = false;     //關閉自動載入場景
         

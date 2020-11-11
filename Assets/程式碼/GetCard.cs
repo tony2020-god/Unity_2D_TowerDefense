@@ -62,22 +62,45 @@ public class GetCard : MonoBehaviour
     /// </summary>
     private void CreateCard()
     {
-        for (int i = 0; i < cards.Length; i++) //迴圈執行 卡牌數量
+        if (LVsave.lastLV == 1)
         {
-            Transform temp = Instantiate(cardObject, contentCard).transform; //變形 = 生成(物件，父物件).變形
-            CardData card = cards[i]; //卡片資料
-            //尋找子物件並更新資料
-            temp.Find("花費").GetComponent<Text>().text = card.cost.ToString();
-            temp.Find("攻擊").GetComponent<Text>().text = card.attack.ToString();
-            temp.Find("血量").GetComponent<Text>().text = card.hp.ToString();
-            temp.Find("名稱").GetComponent<Text>().text = card.name;
-            temp.Find("描述").GetComponent<Text>().text = card.description;
+            for (int i = 0; i < 4; i++) //迴圈執行 卡牌數量
+            {
+                Transform temp = Instantiate(cardObject, contentCard).transform; //變形 = 生成(物件，父物件).變形
+                CardData card = cards[i]; //卡片資料
+                                          //尋找子物件並更新資料
+                temp.Find("花費").GetComponent<Text>().text = card.cost.ToString();
+                temp.Find("攻擊").GetComponent<Text>().text = card.attack.ToString();
+                temp.Find("血量").GetComponent<Text>().text = card.hp.ToString();
+                temp.Find("名稱").GetComponent<Text>().text = card.name;
+                temp.Find("描述").GetComponent<Text>().text = card.description;
 
-            temp.Find("遮色片").Find("圖片").GetComponent<Image>().sprite = Resources.Load<Sprite>(card.file); // 尋找圖片子物件.圖片 = 來源.載入<圖片>(檔案名稱)
+                temp.Find("遮色片").Find("圖片").GetComponent<Image>().sprite = Resources.Load<Sprite>(card.file); // 尋找圖片子物件.圖片 = 來源.載入<圖片>(檔案名稱)
 
-            temp.gameObject.AddComponent<BookCard>().index = card.index; //添加元件<圖鑑卡片> 編號 = 卡牌.編號
-        
+                temp.gameObject.AddComponent<BookCard>().index = card.index; //添加元件<圖鑑卡片> 編號 = 卡牌.編號
+
+            }
         }
+        if (LVsave.lastLV == 2)
+        {
+            for (int i = 0; i < 5; i++) //迴圈執行 卡牌數量
+            {
+                Transform temp = Instantiate(cardObject, contentCard).transform; //變形 = 生成(物件，父物件).變形
+                CardData card = cards[i]; //卡片資料
+                                          //尋找子物件並更新資料
+                temp.Find("花費").GetComponent<Text>().text = card.cost.ToString();
+                temp.Find("攻擊").GetComponent<Text>().text = card.attack.ToString();
+                temp.Find("血量").GetComponent<Text>().text = card.hp.ToString();
+                temp.Find("名稱").GetComponent<Text>().text = card.name;
+                temp.Find("描述").GetComponent<Text>().text = card.description;
+
+                temp.Find("遮色片").Find("圖片").GetComponent<Image>().sprite = Resources.Load<Sprite>(card.file); // 尋找圖片子物件.圖片 = 來源.載入<圖片>(檔案名稱)
+
+                temp.gameObject.AddComponent<BookCard>().index = card.index; //添加元件<圖鑑卡片> 編號 = 卡牌.編號
+
+            }
+        }
+
     }
     private void Awake()
     {

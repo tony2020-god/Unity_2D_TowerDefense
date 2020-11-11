@@ -556,7 +556,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1822163014}
   m_HandleRect: {fileID: 1822163013}
   m_Direction: 0
-  m_Value: 0
+  m_Value: 0.0000037462444
   m_Size: 0.9865796
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1576,6 +1576,7 @@ GameObject:
   - component: {fileID: 1025198844}
   - component: {fileID: 1025198843}
   - component: {fileID: 1025198845}
+  - component: {fileID: 1025198846}
   m_Layer: 0
   m_Name: "\u5361\u724C\u7BA1\u7406\u5668"
   m_TagString: Untagged
@@ -1636,6 +1637,18 @@ MonoBehaviour:
   gameView: {fileID: 938734597}
   loading: {fileID: 938734599}
   imageCD: 0
+--- !u!114 &1025198846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025198842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7b33dfb554121e4882a70a20b03dbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1038303557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,8 +2161,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 876093339}
   m_HandleRect: {fileID: 876093338}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
