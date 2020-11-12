@@ -101,10 +101,15 @@ public class BattleManager : MonoBehaviour
     {
         Application.Quit();
     }
-    public void BackToChooseRole()
+    public void BackToChooseRoleLose()
     {
         SceneManager.LoadScene("選擇角色選單");
        
+    }
+    public void BackToChooseRoleWin()
+    {
+        LVsave.lastLV = LVsave.lastLV + 1;
+        SceneManager.LoadScene("選擇角色選單");
     }
     public void Replay()
     {
