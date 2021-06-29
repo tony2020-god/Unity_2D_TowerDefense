@@ -7,25 +7,42 @@ using System.Collections;//引用系統集合、管理API(協同程式:非同步
 
 public class MenuManager : MonoBehaviour
 {
-   
+    public GameObject explain;
+    public GameObject blackboard;
+    public GameObject NOTE;
 
-   
-   
     /// <summary>
     /// 開始載入背景場景
     /// </summary>
-    public void StartLoading()
+    public IEnumerator StartLoading()
     {
-        print("開始載入.... ");
-
-
-        //SceneManager.LoadScene("關卡一");  //載入場景
+        blackboard.SetActive(true);
+        yield return new WaitForSeconds(3);
         AsyncOperation ao = SceneManager.LoadSceneAsync("選擇角色選單");
-
         ao.allowSceneActivation = true;     //關閉自動載入場景
-
     }
 
+    public void gogame()
+    {
+        StartCoroutine(StartLoading());
+    }
+
+    public void Explain()
+    {
+        explain.SetActive(true);
+    }
+    public void Note()
+    {
+        NOTE.SetActive(true);
+    }
+    public void CloseExplain()
+    {
+        explain.SetActive(false);
+    }
+    public void CloseNote()
+    {
+        NOTE.SetActive(false);
+    }
     /// <summary>
     /// 協程方法:載入
     /// </summary>

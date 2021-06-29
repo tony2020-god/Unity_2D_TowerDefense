@@ -16,6 +16,10 @@ public class Alliance : MonoBehaviour
 
     private void Start()
     {
+        if (gameObject.layer == LayerMask.NameToLayer("礦工"))
+        {
+            LVsave.isMinerSpawn = true;
+        }
         gameObject.GetComponent<Alliance>().dead = dead; //添加元件<移動>.速度 = 速度
         ani = GetComponent<Animator>(); //取得元件<泛型>()
         bm = FindObjectOfType<BattleManager>();
@@ -39,7 +43,6 @@ public class Alliance : MonoBehaviour
                 StartCoroutine(Dead());
             }
         }
-
     }
     /// <summary>
     /// 死亡
@@ -48,16 +51,20 @@ public class Alliance : MonoBehaviour
     {
         dead = true;
         ani.SetTrigger("死亡觸發");
+        if (gameObject.layer == LayerMask.NameToLayer("魔法師"))
+        {
+            LVsave.magiciandead = true;
+        }
+        if (gameObject.layer == LayerMask.NameToLayer("屠龍武士"))
+        {
+            LVsave.dragonkillerdead = true;
+        }
+        if (gameObject.layer == LayerMask.NameToLayer("礦工"))
+        {
+            LVsave.isMinerSpawn = false;
+        }
         yield return new WaitForSeconds(1);
+     
         Destroy(gameObject);
-    }
-   
-
-    private void Update()
-    {
-        
-       
-    }
-
-    
+    }      
 }

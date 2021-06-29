@@ -3,9 +3,12 @@ using UnityEngine.UI;
 
 public class AllianceBase : MonoBehaviour
 {
-    public float hp = 20;
-    public int maxhp = 1000;
+    public float hp = 100;
+    public int maxhp = 100;
     private BattleManager bm;
+    public AudioSource aud;
+    public AudioClip knock;
+
     [Header("血量")]
     public Text HP;
     /// <summary>
@@ -18,9 +21,9 @@ public class AllianceBase : MonoBehaviour
         if (hp > 0)
         {
             hp -= damage;
-            HP.text = "HP:" + hp + "/1000";
+            HP.text = "HP:" + hp + "/100";
             GetComponentInChildren<SpriteRenderer>().color = Color.red;
-
+            aud.PlayOneShot(knock);
             Invoke("ResetColor", 0.2f);
             if (hp <= 0)
             {

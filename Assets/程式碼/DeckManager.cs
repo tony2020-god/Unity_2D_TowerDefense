@@ -26,11 +26,10 @@ public class DeckManager : MonoBehaviour
     public GameObject gameView;
 
     public static DeckManager instance;
-
-
-    public Image loading;
-
-   
+    public GameObject monsterexplain;
+    public GameObject gameexplain;
+    public bool exitdeck;
+    public Image loading; 
     public float imageCD = 0;
 
     /// <summary>
@@ -44,12 +43,14 @@ public class DeckManager : MonoBehaviour
         instance = this;
         btnStart.interactable = false; //取消開始遊戲按鈕 互動
         btnStart.onClick.AddListener(StartBattle); //添加監聽(開始遊戲)
+        LVsave.exitdeck = false;
     }
-    
+
     protected virtual void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) Choose4Card();
     }
+
     protected virtual void Choose4Card()
     {
         while (deck.Count < 4)
@@ -62,14 +63,13 @@ public class DeckManager : MonoBehaviour
             //=>黏巴達 (Lambda c# 7)
             //相同卡牌 = 牌組.尋找全部(卡牌 => 卡牌.等於(目前點選的卡牌資訊))
             List<CardData> sameCard = deck.FindAll(c => c.Equals(card));
-
             if (sameCard.Count < 1)  //如果相同卡牌<1張才能新增
             {
                 //AddCard(r);
             }
         }
-
     }
+
 
     /// <summary>
     /// 添加卡牌至牌組內
@@ -90,14 +90,11 @@ public class DeckManager : MonoBehaviour
             {
                 deck.Add(GetCard.instance.cards[index - 1]); //牌組.增加(取得卡牌.實體物件.卡牌資料[編號])
                 Transform temp;
-
                 temp = Instantiate(DeckObject, contentDeck).transform; //生成 牌組卡牌資訊物件 到 牌組內容
                 temp.gameObject.AddComponent<DeckObject>().index = card.index; //添加牌組物件腳本，讓按鈕有功能
                 temp.name = "已選角色資訊:" + card.name;
-
                 temp.Find("遮色片").Find("圖片").GetComponent<Image>().sprite = Resources.Load<Sprite>(card.file); // 尋找圖片子物件.圖片 = 來源.載入<圖片>(檔案名稱)
-                textDeckCount.text = "角色數量" + deck.Count + "/4"; //更新卡牌數量
-               
+                textDeckCount.text = "角色數量" + deck.Count + "/4"; //更新卡牌數量               
             }
         }
         if (deck.Count == 4) btnStart.interactable = true; //如果卡牌 = 4張 開啟開始遊戲按鈕 互動
@@ -111,13 +108,9 @@ public class DeckManager : MonoBehaviour
     {
         CardData card = GetCard.instance.cards[index - 1]; //選取的卡牌
         List<CardData> sameCard = deck.FindAll(c => c.Equals(card));
-
         deck.Remove(card); //牌組刪除
-
         Transform temp = GameObject.Find("已選角色資訊:" + card.name).transform; //牌組物件
-
-        Destroy(temp.gameObject);
-        
+        Destroy(temp.gameObject);   
         textDeckCount.text = "角色數量" + deck.Count + "/4"; //更新卡牌數量
         btnStart.interactable = false; //取消開始遊戲按鈕 互動
     }
@@ -134,8 +127,7 @@ public class DeckManager : MonoBehaviour
     }
     
     private IEnumerator Loading()
-    {
-        
+    {     
         //SceneManager.LoadScene("關卡1");  //載入場景
         AsyncOperation ao = SceneManager.LoadSceneAsync("關卡"+ LVsave.lastLV);
 
@@ -144,18 +136,32 @@ public class DeckManager : MonoBehaviour
 
         while (imageCD < 1)        //迴圈 while(布林值) "當布林值為 true 時執行敘述"
         {
-
             imageCD = imageCD + 0.01f;
             loading.fillAmount = imageCD / 0.9f;                            //更新載入吧條
                                                               //等待
             if (imageCD >= 0.9f)    //判斷式 if(布林值) "當布林值為true時執行一次"  
             {
                 gameView.SetActive(false); //關閉遊戲載入畫面
-                ao.allowSceneActivation = true;    //允許自動載入場景
-                
+                ao.allowSceneActivation = true;    //允許自動載入場景            
             }
             yield return new WaitForSeconds(0.01f);
-        }
+        }       
+    }
+    public void MonsterExplain()
+    {
+        monsterexplain.SetActive(true);
+    }
+    public void CloseMonsterExplain()
+    {
+        monsterexplain.SetActive(false);
+    }
+    public void GameExplain()
+    {
+        gameexplain.SetActive(true);
+    }
+    public void CloseGameExplain()
+    {
+        gameexplain.SetActive(false);
     }
 }
 

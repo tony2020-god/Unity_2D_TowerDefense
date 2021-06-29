@@ -21,44 +21,51 @@ MonoBehaviour:
       x: 7.2
       y: -2
   - name: "\u7B2C\u4E8C\u6CE2"
-    time: 12
+    time: 3
     monsters:
     - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
         type: 3}
       x: 7.2
       y: -2
   - name: "\u7B2C\u4E09\u6CE2"
-    time: 17
+    time: 3
     monsters:
     - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
         type: 3}
       x: 7.2
       y: -2
   - name: "\u7B2C\u56DB\u6CE2"
-    time: 18
+    time: 3
     monsters:
     - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
         type: 3}
       x: 7.2
       y: -2
   - name: "\u7B2C\u4E94\u6CE2"
-    time: 19
+    time: 3
     monsters:
     - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
         type: 3}
       x: 7.2
       y: -2
   - name: "\u7B2C\u516D\u6CE2"
-    time: 20
+    time: 3
     monsters:
     - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
         type: 3}
       x: 7.2
       y: -2
   - name: "\u7B2C\u4E03\u6CE2"
-    time: 21
+    time: 3
     monsters:
-    - monster: {fileID: 454273965689111971, guid: 583a40cd20812d04ea6048920e899f51,
+    - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
+        type: 3}
+      x: 7.2
+      y: -2
+  - name: "\u7B2C\u516B\u6CE2"
+    time: 3
+    monsters:
+    - monster: {fileID: 6740674904855720243, guid: 56f9ed3142362b64283cf259d6f61d4c,
         type: 3}
       x: 7.2
       y: -2

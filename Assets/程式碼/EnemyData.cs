@@ -13,5 +13,6 @@ public class EnemyData : ScriptableObject
     public float attackcd;
     [Header("攻擊距離"), Range(0, 15)]
     public float AttackDistance;
-
+    [Header("掉落金錢"), Range(0, 500)]
+    public int deadmoney;
 }

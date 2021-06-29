@@ -17,3 +17,4 @@ MonoBehaviour:
   speed: 2
   attackcd: 0.667
   AttackDistance: 1
+  deadmoney: 50

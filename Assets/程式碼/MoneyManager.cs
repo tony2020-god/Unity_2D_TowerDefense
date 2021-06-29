@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;//引用系統集合、管理API(協同程式:非同步處理)
+using System;
 
 public class MoneyManager : MonoBehaviour
 {
@@ -22,44 +23,63 @@ public class MoneyManager : MonoBehaviour
     public Transform trambattle;
 
     public int maxmoney = 1000;
+    public bool countmoney = false;
     public int moneyLV = 1;
     public int money = 0;
     public int walletcost = 50;
-
+    public int killmoney;
+    public AudioSource aud;
+    public AudioClip GetMoneySound;
+    public bool ifGomoney = false;
+    public float moneysecond;
     private void Update()
     {
+        if (dialogue.instance.gogame == true && ifGomoney == false)
+        {
+            ifGomoney = true;
+            GoMoney();
+        }
         if (money == maxmoney)
         {
-            RoleCost(GetCard.instance, trambattle, BattleManager.instance, BattleManager.instance, BattleManager.instance, BattleCard.instance);
+             textmoney.text = maxmoney + "/" + maxmoney; //更新卡牌數量
+             countmoney = false;
+             RoleCost(GetCard.instance, trambattle, BattleManager.instance, BattleManager.instance, BattleManager.instance, BattleCard.instance);
+        }           
+        if(LVsave.isMinerSpawn == true)
+        {
+            moneysecond = 0.05f;
+        }
+        else
+        {
+            moneysecond = 0.1f;
         }
     }
+
     public void Awake()
-    {
-        
+    {       
         btnwallet.onClick.AddListener(UPWallet); //添加監聽(開始遊戲)
         instance = this;
     }
 
     public void Start()
     {
-        GoMoney();
+        textmoney.text = money + "/" + maxmoney; //更新卡牌數量
+        textmoneyLV.text = "LV" + moneyLV;
+        textwalletcost.text = walletcost + "元";
     }
 
     public void GoMoney()
     {
-        textmoney.text = money + "/" + maxmoney; //更新卡牌數量
-        textmoneyLV.text = "LV" + moneyLV;
-        textwalletcost.text = walletcost + "元";
- 
         StartCoroutine(moneycount());
     }
+
     public void UPWallet()
     {
         moneyLV = moneyLV + 1;
         if (moneyLV == 2)
         {
             money = money - walletcost;
-            if (money < maxmoney)
+            if (countmoney == false)
             {
                 StartCoroutine(moneycount());
             }
@@ -71,11 +91,11 @@ public class MoneyManager : MonoBehaviour
         if (moneyLV == 3)
         {
             money = money - walletcost;
-            if (money < maxmoney)
+            if (countmoney == false)
             {
                 StartCoroutine(moneycount());
             }
-            maxmoney = 400;
+            maxmoney = 300;
             walletcost = 200;
             textmoneyLV.text = "LV" + moneyLV;
             textwalletcost.text = walletcost + "元";
@@ -83,11 +103,11 @@ public class MoneyManager : MonoBehaviour
         if (moneyLV == 4)
         {
             money = money - walletcost;
-            if (money < maxmoney)
+            if (countmoney == false)
             {
                 StartCoroutine(moneycount());
             }
-            maxmoney = 700;
+            maxmoney = 400;
             walletcost = 300;
             textmoneyLV.text = "LV" + moneyLV;
             textwalletcost.text = walletcost + "元";
@@ -95,69 +115,75 @@ public class MoneyManager : MonoBehaviour
         if (moneyLV == 5)
         {
             money = money - walletcost;
-            if (money < maxmoney)
+            if (countmoney == false)
             {
                 StartCoroutine(moneycount());
             }
-            maxmoney = 1000;
+            maxmoney = 500;
             textmoneyLV.text = "MAX LV";
             textwalletcost.text = "打烊";
             btnwallet.interactable = false;
         }
-
     }
-   public IEnumerator moneycount()
+
+    public IEnumerator moneycount()
     {
         while (money < maxmoney)
         {
-            
+            countmoney = true;
             money = money + 1;
             textmoney.text = money + "/" + maxmoney; //更新卡牌數量
             if (money < walletcost)
             {
-                btnwallet.interactable = false;
-               
-             }
+                btnwallet.interactable = false;            
+            }
             if (moneyLV < 5 && money >= walletcost)
             { 
-                    btnwallet.interactable = true;
+                btnwallet.interactable = true;
             }
             RoleCost(GetCard.instance, trambattle ,BattleManager.instance, BattleManager.instance, BattleManager.instance, BattleCard.instance);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(moneysecond);
         }
     }
+
     public void RoleCost( GetCard cards, Transform trambattle, BattleManager BattleRoleTransform,BattleManager BattleRolebutton,BattleManager RoleCost,BattleCard canProduce)
     {
         
         for (int i = 0; i < 4; i++)
-        {
-          
+        {          
             if (money < BattleManager.instance.RoleCost[i])
             {
                 BattleManager.instance.BattleRoleTransform[i].Find("遮色片").Find("圖片").GetComponent<Image>().color = Color.gray; // 尋找圖片子物件.顏色 = 顏色.灰色;
-                BattleManager.instance.BattleRolebutton[i].GetComponent<Button>().interactable = false;
-                
+                BattleManager.instance.BattleRolebutton[i].GetComponent<Button>().interactable = false;               
             }
             if (BattleManager.instance.BattleRolebutton[i].GetComponent<BattleCard>().canProduce == true)
             {
                 if (money >= BattleManager.instance.RoleCost[i])
                 {
                     BattleManager.instance.BattleRoleTransform[i].Find("遮色片").Find("圖片").GetComponent<Image>().color = Color.white; // 尋找圖片子物件.顏色 = 顏色.白色;
-                    BattleManager.instance.BattleRolebutton[i].GetComponent<Button>().interactable = true;
-                 
+                    BattleManager.instance.BattleRolebutton[i].GetComponent<Button>().interactable = true;                 
                 }
             }
-
         }
-
      }
+
     public void MinusRoleCost(int cost)
     {
         money = money - cost;
-        if (money < maxmoney)
+        if (countmoney == false)
         {
             StartCoroutine(moneycount());
         }
     }
 
+    public void killmonster()
+    {
+        money = money + killmoney;
+        if (money >= maxmoney)
+        {
+            money = maxmoney;
+        }
+        aud.PlayOneShot(GetMoneySound);
+        print("他掉的錢:" + killmoney);
+    }
 }

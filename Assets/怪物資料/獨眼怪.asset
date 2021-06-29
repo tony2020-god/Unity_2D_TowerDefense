@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: "\u7368\u773C\u602A"
   m_EditorClassIdentifier: 
   hp: 15
-  attack: 1
+  attack: 2
   speed: 3
   attackcd: 0.667
   AttackDistance: 1
+  deadmoney: 50
