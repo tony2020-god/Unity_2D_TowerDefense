@@ -1532,7 +1532,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1, y: 16}
-  m_SizeDelta: {x: 450, y: 1}
+  m_SizeDelta: {x: 450, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &915670296
 MonoBehaviour:
@@ -3392,7 +3392,7 @@ PrefabInstance:
     - target: {fileID: 2211001334903417848, guid: 8fbf9b4b1f72c3f4095204350e3070eb,
         type: 3}
       propertyPath: m_Text
-      value: "\u89E3\u9396\u65B0\u89D2\u8272\u300C\u5C60\u9F8D\u8005\u300D"
+      value: "\u89E3\u9396\u65B0\u89D2\u8272\u300C\u5C60\u9F8D\u6B66\u58EB\u300D"
       objectReference: {fileID: 0}
     - target: {fileID: 2211001334903417849, guid: 8fbf9b4b1f72c3f4095204350e3070eb,
         type: 3}

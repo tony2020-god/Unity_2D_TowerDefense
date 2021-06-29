@@ -38,14 +38,14 @@ public class dialogue : MonoBehaviour
         if (LVsave.lastLV == 2 && LVsave.exitdeck == true)
         {
             Dia.SetActive(true);
-            string[] wordsText = { "這裡是迷矮森林是蘑菇怪的地盤","蘑菇怪的攻擊力和血量都比哥布林高，千萬要小心!" };
+            string[] wordsText = { "這裡是迷矮森林是蘑菇怪的地盤","蘑菇怪的攻擊力和血量都比哥布林高，千萬別小看他們!" };
             words = wordsText;
             Startdia();
         }
         if (LVsave.lastLV == 3 && LVsave.exitdeck == true)
         {
             Dia.SetActive(true);
-            string[] wordsText = { "天氣變得很寒冷了", "看來我們到了火靈巫師的左手「冰龍」的領地","似乎只有槍手特製的槍和屠龍武士能對付他身上的鱗片","屠龍武士就在前方，我們快去幫他", "小心它發射的火球會貫穿所有友軍!" };
+            string[] wordsText = { "天氣變得很寒冷了", "看來我們到了火靈巫師的左手「冰龍」的領地","似乎只有槍手特製的槍和屠龍武士能對付他身上的鱗片","屠龍武士就在前方，我們快去幫他", "小心冰龍發射的火球會貫穿所有友軍!" };
             words = wordsText;
             Startdia();
         }
@@ -59,7 +59,7 @@ public class dialogue : MonoBehaviour
         if (LVsave.lastLV == 5 && LVsave.exitdeck == true)
         {
             Dia.SetActive(true);
-            string[] wordsText = { "終於來到火靈巫師的大本營", "所有怪物都聽他指揮，打敗他一切都結束了!" ,"夢魘還在追我們，必須趁她還沒來之前摧毀主堡","主堡中有火靈巫師的徒弟在幫他護城","閃電的威力驚人，務必要當心"};
+            string[] wordsText = { "終於來到火靈巫師的大本營", "所有怪物都聽他指揮，打敗他一切都結束了!" ,"主堡中有火靈巫師的徒弟在幫他護城","閃電的威力驚人，要先想辦法處理他...","夢魘還在後面追我們，必須趁她參戰之前摧毀主堡","時間緊迫，趕緊行動吧!" };
             words = wordsText;
             Startdia();
         }
@@ -121,7 +121,6 @@ public class dialogue : MonoBehaviour
                     timer = 0;
                     currentPos++;
                     myText.text = words[strindex].Substring(0, currentPos); //刷新文本顯示内容
-
                     if (currentPos >= words[strindex].Length)
                     {
                         OnFinish();

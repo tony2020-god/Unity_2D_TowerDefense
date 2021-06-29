@@ -25,17 +25,13 @@ public class Alliance : MonoBehaviour
         bm = FindObjectOfType<BattleManager>();
     }
 
-
     /// <summary>
     /// 受傷
     /// </summary>
     /// <param name="damage">接收收到的傷害值</param>
     public void Damage(float damage)
     {
-       // print("刺客血量"+ hp);
-        //GetComponentInChildren<SpriteRenderer>().color = Color.red;
         hp -= damage;
-        //Invoke("ResetColor", 0.2f);
         if (dead == false)
         {
             if (hp <= 0)
@@ -44,6 +40,7 @@ public class Alliance : MonoBehaviour
             }
         }
     }
+
     /// <summary>
     /// 死亡
     /// </summary>

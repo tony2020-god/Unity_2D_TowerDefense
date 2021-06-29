@@ -63,7 +63,6 @@ public class Enemy : MonoBehaviour
         hp -= damage;
         if (dead == false)
         {
-            print(damage);
             if (hp <= 0)
             {
                 StartCoroutine(Dead());
@@ -139,7 +138,4 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
-
 }

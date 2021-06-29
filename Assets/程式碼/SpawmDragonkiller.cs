@@ -12,8 +12,6 @@ public class SpawmDragonkiller : MonoBehaviour
         {
             spawndragonkill();
         }    
-
-
     }
     public void spawndragonkill()
     {
@@ -27,6 +25,4 @@ public class SpawmDragonkiller : MonoBehaviour
         temp.gameObject.GetComponent<RoleMove>().AttackDistance = 1; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離
         temp.gameObject.GetComponent<Alliance>().hp = 30; //添加元件<盟友>.血量 = 卡片.血量
     }
-
-
 }

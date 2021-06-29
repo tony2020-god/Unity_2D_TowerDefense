@@ -20,7 +20,5 @@ public class LVsave : MonoBehaviour
     public void Start()
     {
         print("lv為 :" + lastLV);
-
     }
-
 }

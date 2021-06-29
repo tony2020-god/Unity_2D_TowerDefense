@@ -39,7 +39,7 @@ public class MoneyManager : MonoBehaviour
             ifGomoney = true;
             GoMoney();
         }
-        if (money == maxmoney)
+        if (money >= maxmoney)
         {
              textmoney.text = maxmoney + "/" + maxmoney; //更新卡牌數量
              countmoney = false;
@@ -128,27 +128,29 @@ public class MoneyManager : MonoBehaviour
 
     public IEnumerator moneycount()
     {
-        while (money < maxmoney)
+        if (countmoney == false)
         {
-            countmoney = true;
-            money = money + 1;
-            textmoney.text = money + "/" + maxmoney; //更新卡牌數量
-            if (money < walletcost)
+            while (money < maxmoney)
             {
-                btnwallet.interactable = false;            
+                countmoney = true;
+                money = money + 1;
+                textmoney.text = money + "/" + maxmoney; //更新卡牌數量
+                if (money < walletcost)
+                {
+                    btnwallet.interactable = false;
+                }
+                if (moneyLV < 5 && money >= walletcost)
+                {
+                    btnwallet.interactable = true;
+                }
+                RoleCost(GetCard.instance, trambattle, BattleManager.instance, BattleManager.instance, BattleManager.instance, BattleCard.instance);
+                yield return new WaitForSeconds(moneysecond);
             }
-            if (moneyLV < 5 && money >= walletcost)
-            { 
-                btnwallet.interactable = true;
-            }
-            RoleCost(GetCard.instance, trambattle ,BattleManager.instance, BattleManager.instance, BattleManager.instance, BattleCard.instance);
-            yield return new WaitForSeconds(moneysecond);
-        }
+        }   
     }
 
     public void RoleCost( GetCard cards, Transform trambattle, BattleManager BattleRoleTransform,BattleManager BattleRolebutton,BattleManager RoleCost,BattleCard canProduce)
     {
-        
         for (int i = 0; i < 4; i++)
         {          
             if (money < BattleManager.instance.RoleCost[i])
@@ -179,11 +181,6 @@ public class MoneyManager : MonoBehaviour
     public void killmonster()
     {
         money = money + killmoney;
-        if (money >= maxmoney)
-        {
-            money = maxmoney;
-        }
         aud.PlayOneShot(GetMoneySound);
-        print("他掉的錢:" + killmoney);
     }
 }

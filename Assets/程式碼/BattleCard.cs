@@ -29,7 +29,6 @@ public class BattleCard : MonoBehaviour
         GetComponent<Button>().onClick.AddListener(ChooseBattleCard); // 取得按鈕.點擊.添加監聽器(方法)
         GetComponent<Button>().interactable = false;
         temp.Find("遮色片").Find("圖片").GetComponent<Image>().color = Color.gray; // 尋找圖片子物件.顏色 = 顏色.灰色;
-        print(canProduce);
     }
 
     /// <summary>

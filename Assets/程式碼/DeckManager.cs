@@ -115,8 +115,6 @@ public class DeckManager : MonoBehaviour
         btnStart.interactable = false; //取消開始遊戲按鈕 互動
     }
 
-   
-
     /// <summary>
     /// 開始遊戲
     /// </summary>

@@ -21,4 +21,12 @@ public class FireStone : MonoBehaviour
 
         }
     }
+    public void Start()
+    {
+        Invoke("destoryob", 10);
+    }
+    public void destoryob()
+    {
+        Destroy(gameObject);
+    }
 }

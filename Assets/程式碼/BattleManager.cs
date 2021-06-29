@@ -105,8 +105,7 @@ public class BattleManager : MonoBehaviour
     }
     public void BackToChooseRoleLose()
     {
-        SceneManager.LoadScene("選擇角色選單");
-       
+        SceneManager.LoadScene("選擇角色選單");    
     }
     public void BackToChooseRoleWin()
     {
@@ -145,44 +144,44 @@ public class BattleManager : MonoBehaviour
             Vector3 pos = new Vector2(-7.4f, -3); //座標
             Quaternion qua = Quaternion.Euler(0, 0, 0); //角度
             GameObject temp = Instantiate(data.Spawn[index - 1].Alliance, pos, qua); //生成
+            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量      
             temp.gameObject.GetComponent<RoleMove>().speed = card.speed; //添加元件<盟友移動> 速度 = 卡牌.速度
             temp.gameObject.GetComponent<RoleMove>().damage = card.attack; //添加元件<盟友移動>.傷害 = 卡牌.攻擊
             temp.gameObject.GetComponent<RoleMove>().AttackCD = card.AttackCD; //添加元件<盟友移動>.攻擊速度 = 卡片.攻擊速度
-            temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離
-            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量           
+            temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離    
         }
         else if (index == 5)
         {
             Vector3 pos = new Vector2(-8f, -1.66f); //座標
             Quaternion qua = Quaternion.Euler(0, 0, 0); //角度
             GameObject temp = Instantiate(data.Spawn[index - 1].Alliance, pos, qua); //生成
+            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量   
             temp.gameObject.GetComponent<RoleMove>().speed = card.speed; //添加元件<盟友移動> 速度 = 卡牌.速度
             temp.gameObject.GetComponent<RoleMove>().damage = card.attack; //添加元件<盟友移動>.傷害 = 卡牌.攻擊
             temp.gameObject.GetComponent<RoleMove>().AttackCD = card.AttackCD; //添加元件<盟友移動>.攻擊速度 = 卡片.攻擊速度
-            temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離
-            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量           
+            temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離        
         }
         else if(index ==8)
         {
             Vector3 pos = new Vector2(-7.4f, -2.8f); //座標
-            Quaternion qua = Quaternion.Euler(0, 0, 0); //角度
+            Quaternion qua = Quaternion.Euler(0, 0, 0); //角度  
             GameObject temp = Instantiate(data.Spawn[index - 1].Alliance, pos, qua); //生成
+            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量   
             temp.gameObject.GetComponent<RoleMove>().speed = card.speed; //添加元件<盟友移動> 速度 = 卡牌.速度
             temp.gameObject.GetComponent<RoleMove>().damage = card.attack; //添加元件<盟友移動>.傷害 = 卡牌.攻擊
             temp.gameObject.GetComponent<RoleMove>().AttackCD = card.AttackCD; //添加元件<盟友移動>.攻擊速度 = 卡片.攻擊速度
-            temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離
-            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量           
+            temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離  
         }
         else
         {
             Vector3 pos = new Vector2(-7.4f, -2.3f); //座標
             Quaternion qua = Quaternion.Euler(0, 0, 0); //角度
             GameObject temp = Instantiate(data.Spawn[index - 1].Alliance, pos, qua); //生成
+            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量
             temp.gameObject.GetComponent<RoleMove>().speed = card.speed; //添加元件<盟友移動> 速度 = 卡牌.速度
             temp.gameObject.GetComponent<RoleMove>().damage = card.attack; //添加元件<盟友移動>.傷害 = 卡牌.攻擊
             temp.gameObject.GetComponent<RoleMove>().AttackCD = card.AttackCD; //添加元件<盟友移動>.攻擊速度 = 卡片.攻擊速度
             temp.gameObject.GetComponent<RoleMove>().AttackDistance = card.AtackDistance; //添加元件<盟友移動>.攻擊距離 = 卡片.攻擊距離
-            temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量
         }
     }
 }

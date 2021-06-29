@@ -339,7 +339,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
   m_Text: "\u300C\u706B\u9748\u5DEB\u5E2B\u7684\u5DE6\u624B\u300D\u51B0\u9F8D\n\u5099\u8A3B:
-    \u653B\u64CA\u80FD\u8CAB\u7A7F\u6575\u4EBA\n\u8CDE\u91D1: $150"
+    \u6709\u8CAB\u7A7F\u653B\u64CA\u548C\u51B0\u7532\n\u8CDE\u91D1: $150"
 --- !u!222 &71194225
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -725,7 +725,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1822163014}
   m_HandleRect: {fileID: 1822163013}
   m_Direction: 0
-  m_Value: -0.0000016541338
+  m_Value: 0
   m_Size: 0.9696058
   m_NumberOfSteps: 0
   m_OnValueChanged:

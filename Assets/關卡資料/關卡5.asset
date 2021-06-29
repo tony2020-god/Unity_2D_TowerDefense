@@ -81,7 +81,7 @@ MonoBehaviour:
       x: 7.2
       y: -1.9
   - name: "\u7B2C\u5341\u6CE2"
-    time: 30
+    time: 20
     monsters:
     - monster: {fileID: 7217649269684606798, guid: ce29b084513b5f74c86bac1807da468e,
         type: 3}
