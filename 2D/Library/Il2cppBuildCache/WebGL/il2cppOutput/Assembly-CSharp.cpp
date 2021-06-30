@@ -12844,8 +12844,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuManager_CloseNote_mF98C559545E8331B9
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MenuManager_Start_m4E4A5EF33C27448D7F34FD29B93589635F1B2EE2 (MenuManager_tD52BB657312ED53913E423A985CACC86F900124C * __this, const RuntimeMethod* method)
 {
 	{
-		// Screen.SetResolution(450, 800, false); //螢幕.設定解析度(寬,高,是否全螢幕) - EXE或網頁版(Build Settings)
-		Screen_SetResolution_m1C17EB7EDF8CDA862338782353D53DFF6742DFC5(((int32_t)450), ((int32_t)800), (bool)0, /*hidden argument*/NULL);
+		// Screen.SetResolution(1280, 720, false); //螢幕.設定解析度(寬,高,是否全螢幕) - EXE或網頁版(Build Settings)
+		Screen_SetResolution_m1C17EB7EDF8CDA862338782353D53DFF6742DFC5(((int32_t)1280), ((int32_t)720), (bool)0, /*hidden argument*/NULL);
 		// }
 		return;
 	}
