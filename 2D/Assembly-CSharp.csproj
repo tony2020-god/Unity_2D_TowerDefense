@@ -77,6 +77,7 @@
     <Compile Include="Assets\Wizard - 2D Character\Demo\SimplePlayerController.cs" />
     <Compile Include="Assets\程式碼\thounder.cs" />
     <Compile Include="Assets\程式碼\GetCard.cs" />
+    <Compile Include="Assets\程式碼\table.cs" />
     <Compile Include="Assets\程式碼\BattleCard.cs" />
     <Compile Include="Assets\程式碼\LVsave.cs" />
     <Compile Include="Assets\程式碼\Sound.cs" />

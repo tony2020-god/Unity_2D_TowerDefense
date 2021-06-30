@@ -500,69 +500,73 @@ extern void U3Ckeep5secU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_O
 extern void U3Ckeep5secU3Ed__3_System_Collections_IEnumerator_Reset_m6BD551A455AE37088685ADCEB4FB85D24C3A4C21 (void);
 // 0x000000F5 System.Object explotion/<keep5sec>d__3::System.Collections.IEnumerator.get_Current()
 extern void U3Ckeep5secU3Ed__3_System_Collections_IEnumerator_get_Current_m1C51AEC6ABA7802150DEEDE05FBC5F944E1D0B53 (void);
-// 0x000000F6 System.Void thounder::Start()
+// 0x000000F6 System.Void table::Start()
+extern void table_Start_m19E372BE5C4FAAF3CFD59FE8AE645DBEDC033206 (void);
+// 0x000000F7 System.Void table::.ctor()
+extern void table__ctor_mE9548D814E78AB95DEF71108A38DBB4D3E760853 (void);
+// 0x000000F8 System.Void thounder::Start()
 extern void thounder_Start_mE819E2B6675E23C221678AFF4313F2F92439BB58 (void);
-// 0x000000F7 System.Collections.IEnumerator thounder::keep1sec()
+// 0x000000F9 System.Collections.IEnumerator thounder::keep1sec()
 extern void thounder_keep1sec_mBAE0CE3FC9D6C4B48EFD883C05E2E4C80CC8B84B (void);
-// 0x000000F8 System.Void thounder::OnTriggerEnter2D(UnityEngine.Collider2D)
+// 0x000000FA System.Void thounder::OnTriggerEnter2D(UnityEngine.Collider2D)
 extern void thounder_OnTriggerEnter2D_m4421BE44EE1D66D4886243123D3C7289AEE7C7D7 (void);
-// 0x000000F9 System.Void thounder::.ctor()
+// 0x000000FB System.Void thounder::.ctor()
 extern void thounder__ctor_mC489D03939FC32A18D298432E4E4CDE66C7E5CB5 (void);
-// 0x000000FA System.Void thounder/<keep1sec>d__3::.ctor(System.Int32)
+// 0x000000FC System.Void thounder/<keep1sec>d__3::.ctor(System.Int32)
 extern void U3Ckeep1secU3Ed__3__ctor_m600F8D58A8E18DD2C7C808B80FAB75C403F54748 (void);
-// 0x000000FB System.Void thounder/<keep1sec>d__3::System.IDisposable.Dispose()
+// 0x000000FD System.Void thounder/<keep1sec>d__3::System.IDisposable.Dispose()
 extern void U3Ckeep1secU3Ed__3_System_IDisposable_Dispose_m2992DDD2FB6AF06137818397D6EDF3B7E131728D (void);
-// 0x000000FC System.Boolean thounder/<keep1sec>d__3::MoveNext()
+// 0x000000FE System.Boolean thounder/<keep1sec>d__3::MoveNext()
 extern void U3Ckeep1secU3Ed__3_MoveNext_mF46D4202522C67BD3100E72E014A8DCC9C988AC3 (void);
-// 0x000000FD System.Object thounder/<keep1sec>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000000FF System.Object thounder/<keep1sec>d__3::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3Ckeep1secU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1F4F57A07FAF59A2E92F0B9CFE3C01DA8A109388 (void);
-// 0x000000FE System.Void thounder/<keep1sec>d__3::System.Collections.IEnumerator.Reset()
+// 0x00000100 System.Void thounder/<keep1sec>d__3::System.Collections.IEnumerator.Reset()
 extern void U3Ckeep1secU3Ed__3_System_Collections_IEnumerator_Reset_m28E1AFB495FD0464F2922F5768CAD78C5E8059BF (void);
-// 0x000000FF System.Object thounder/<keep1sec>d__3::System.Collections.IEnumerator.get_Current()
+// 0x00000101 System.Object thounder/<keep1sec>d__3::System.Collections.IEnumerator.get_Current()
 extern void U3Ckeep1secU3Ed__3_System_Collections_IEnumerator_get_Current_mA387C44921EE49F4F1FE52A81657966938BFF43D (void);
-// 0x00000100 System.Void ClearSky.SimplePlayerController::Start()
+// 0x00000102 System.Void ClearSky.SimplePlayerController::Start()
 extern void SimplePlayerController_Start_m446FBA8D52C268EEEF7EFA0716F9BB02E366A102 (void);
-// 0x00000101 System.Void ClearSky.SimplePlayerController::Update()
+// 0x00000103 System.Void ClearSky.SimplePlayerController::Update()
 extern void SimplePlayerController_Update_m08A3438612AFA8D98C3C692936926F49EB7B5D7B (void);
-// 0x00000102 System.Void ClearSky.SimplePlayerController::OnTriggerEnter2D(UnityEngine.Collider2D)
+// 0x00000104 System.Void ClearSky.SimplePlayerController::OnTriggerEnter2D(UnityEngine.Collider2D)
 extern void SimplePlayerController_OnTriggerEnter2D_m2165D63EFB1C28011CB7B486C388AE51CC0C1247 (void);
-// 0x00000103 System.Void ClearSky.SimplePlayerController::Run()
+// 0x00000105 System.Void ClearSky.SimplePlayerController::Run()
 extern void SimplePlayerController_Run_mB4D73A82865F6AFBFE14390AD3EC58F7B0607172 (void);
-// 0x00000104 System.Void ClearSky.SimplePlayerController::Jump()
+// 0x00000106 System.Void ClearSky.SimplePlayerController::Jump()
 extern void SimplePlayerController_Jump_mE34AC00C24A3294C69D9A65B7FEFD3320A439BFC (void);
-// 0x00000105 System.Void ClearSky.SimplePlayerController::Attack()
+// 0x00000107 System.Void ClearSky.SimplePlayerController::Attack()
 extern void SimplePlayerController_Attack_m30E780B8BC8E5B6B022119B2A29346D8BF9342E8 (void);
-// 0x00000106 System.Void ClearSky.SimplePlayerController::Hurt()
+// 0x00000108 System.Void ClearSky.SimplePlayerController::Hurt()
 extern void SimplePlayerController_Hurt_mAFBB90D8A0C67BD5CFAF79B0FB750E371F007B68 (void);
-// 0x00000107 System.Void ClearSky.SimplePlayerController::Die()
+// 0x00000109 System.Void ClearSky.SimplePlayerController::Die()
 extern void SimplePlayerController_Die_m3EBF411ED3D2B7F8B04DBDDB84A4C016EEB8B5B1 (void);
-// 0x00000108 System.Void ClearSky.SimplePlayerController::Restart()
+// 0x0000010A System.Void ClearSky.SimplePlayerController::Restart()
 extern void SimplePlayerController_Restart_mB598F13603A32248BE0A51805D54CE17F809B317 (void);
-// 0x00000109 System.Void ClearSky.SimplePlayerController::.ctor()
+// 0x0000010B System.Void ClearSky.SimplePlayerController::.ctor()
 extern void SimplePlayerController__ctor_m5689D59800919665E50E10D638B3840396CA41C6 (void);
-// 0x0000010A System.Void ClearSky.WizDemo1::Awake()
+// 0x0000010C System.Void ClearSky.WizDemo1::Awake()
 extern void WizDemo1_Awake_m48D7DE34D7BB5DE8FD6E5286684EEA71E15E239F (void);
-// 0x0000010B System.Void ClearSky.WizDemo1::ResetAnimation()
+// 0x0000010D System.Void ClearSky.WizDemo1::ResetAnimation()
 extern void WizDemo1_ResetAnimation_mD2CF3AB66EF1132DD6570013633D4356740E9F25 (void);
-// 0x0000010C System.Void ClearSky.WizDemo1::Idle()
+// 0x0000010E System.Void ClearSky.WizDemo1::Idle()
 extern void WizDemo1_Idle_m5BD37174982E5720009948EA9A4847D69E6B10CF (void);
-// 0x0000010D System.Void ClearSky.WizDemo1::Attack()
+// 0x0000010F System.Void ClearSky.WizDemo1::Attack()
 extern void WizDemo1_Attack_m7EDA67EBB623619537EEF8673538C7DE53227D68 (void);
-// 0x0000010E System.Void ClearSky.WizDemo1::TripOver()
+// 0x00000110 System.Void ClearSky.WizDemo1::TripOver()
 extern void WizDemo1_TripOver_mC4394778A219BA5462FB870B8803ACF6D4C14077 (void);
-// 0x0000010F System.Void ClearSky.WizDemo1::Hurt()
+// 0x00000111 System.Void ClearSky.WizDemo1::Hurt()
 extern void WizDemo1_Hurt_m2CC010784246B6605A8259875869E8B47E1A47EE (void);
-// 0x00000110 System.Void ClearSky.WizDemo1::Die()
+// 0x00000112 System.Void ClearSky.WizDemo1::Die()
 extern void WizDemo1_Die_m588800D380C8E880A2E73F0A80C53210E5A47B0D (void);
-// 0x00000111 System.Void ClearSky.WizDemo1::LookUp()
+// 0x00000113 System.Void ClearSky.WizDemo1::LookUp()
 extern void WizDemo1_LookUp_m2116D1C86C255E276EFC7A436913C6979FB97B21 (void);
-// 0x00000112 System.Void ClearSky.WizDemo1::Run()
+// 0x00000114 System.Void ClearSky.WizDemo1::Run()
 extern void WizDemo1_Run_mACC8AB077290F2801C7290F03F7520CA47FD9AEE (void);
-// 0x00000113 System.Void ClearSky.WizDemo1::Jump()
+// 0x00000115 System.Void ClearSky.WizDemo1::Jump()
 extern void WizDemo1_Jump_m09EA2AD0DE5DEC36114E7F5AE5ABB2A13FC4498E (void);
-// 0x00000114 System.Void ClearSky.WizDemo1::.ctor()
+// 0x00000116 System.Void ClearSky.WizDemo1::.ctor()
 extern void WizDemo1__ctor_m5D96A35B778F5659EBAA5753B7BCB12A65C278E1 (void);
-static Il2CppMethodPointer s_methodPointers[276] = 
+static Il2CppMethodPointer s_methodPointers[278] = 
 {
 	GUI_Demo_Start_m6753CC1A6D2044AF9C77B4C7273F94304B68E462,
 	GUI_Demo_OnGUI_mEB66A73B367C1BCF6D9A1BAEC0561603C34141B7,
@@ -809,6 +813,8 @@ static Il2CppMethodPointer s_methodPointers[276] =
 	U3Ckeep5secU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5D6165DDAB6F77035B5C25F10D8A6B8E98BBCCE0,
 	U3Ckeep5secU3Ed__3_System_Collections_IEnumerator_Reset_m6BD551A455AE37088685ADCEB4FB85D24C3A4C21,
 	U3Ckeep5secU3Ed__3_System_Collections_IEnumerator_get_Current_m1C51AEC6ABA7802150DEEDE05FBC5F944E1D0B53,
+	table_Start_m19E372BE5C4FAAF3CFD59FE8AE645DBEDC033206,
+	table__ctor_mE9548D814E78AB95DEF71108A38DBB4D3E760853,
 	thounder_Start_mE819E2B6675E23C221678AFF4313F2F92439BB58,
 	thounder_keep1sec_mBAE0CE3FC9D6C4B48EFD883C05E2E4C80CC8B84B,
 	thounder_OnTriggerEnter2D_m4421BE44EE1D66D4886243123D3C7289AEE7C7D7,
@@ -841,7 +847,7 @@ static Il2CppMethodPointer s_methodPointers[276] =
 	WizDemo1_Jump_m09EA2AD0DE5DEC36114E7F5AE5ABB2A13FC4498E,
 	WizDemo1__ctor_m5D96A35B778F5659EBAA5753B7BCB12A65C278E1,
 };
-static const int32_t s_InvokerIndices[276] = 
+static const int32_t s_InvokerIndices[278] = 
 {
 	1177,
 	1177,
@@ -1089,6 +1095,8 @@ static const int32_t s_InvokerIndices[276] =
 	1177,
 	1146,
 	1177,
+	1177,
+	1177,
 	1146,
 	1011,
 	1177,
@@ -1133,7 +1141,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	276,
+	278,
 	s_methodPointers,
 	0,
 	NULL,

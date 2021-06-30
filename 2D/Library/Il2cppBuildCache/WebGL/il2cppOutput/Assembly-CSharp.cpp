@@ -306,6 +306,8 @@ struct WizDemo1_t37C7D978C1497AD3D8D5B20FD9D6689EEDCBB4C7;
 struct dialogue_tA68E77E736032DB170D1F873EF9A125B13D684E2;
 // explotion
 struct explotion_t9B7E649546C27EDE1E99FE014516DE6023B1E2D1;
+// table
+struct table_tDB309355BBE68EF226A1AC19B7E959E99280AC27;
 // thounder
 struct thounder_t6905314ADDA042DDD177B98B09BF0E0F74720023;
 // Alliance/<Dead>d__6
@@ -7069,6 +7071,15 @@ public:
 };
 
 
+// table
+struct table_tDB309355BBE68EF226A1AC19B7E959E99280AC27  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
+{
+public:
+
+public:
+};
+
+
 // thounder
 struct thounder_t6905314ADDA042DDD177B98B09BF0E0F74720023  : public MonoBehaviour_t37A501200D970A8257124B0EAE00A0FF3DDC354A
 {
@@ -8413,6 +8424,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MoneyManager_MinusRoleCost_mD3FC20EEF42D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnCDU3Ed__10__ctor_mE45D2CB7D98765A02CDCA87A8356EC1F741A7368 (U3CSpawnCDU3Ed__10_t88DF30AB587103E5F95F573EAF2FA15D74C8D093 * __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method);
 // System.Void BattleCard/<SpawnCDImage>d__11::.ctor(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CSpawnCDImageU3Ed__11__ctor_mAC52283DB62C42DBA699AD6CD778E38E41F643FF (U3CSpawnCDImageU3Ed__11_t04C880BBC1EDCA9BD69E24EA5F86B5FDEC84A357 * __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method);
+// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_SetResolution_m1C17EB7EDF8CDA862338782353D53DFF6742DFC5 (int32_t ___width0, int32_t ___height1, bool ___fullscreen2, const RuntimeMethod* method);
 // System.Void BattleManager::CreateCard(DeckManager)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_CreateCard_mD5CA8B6E22298BE5E439C2894D6480E555B92EC9 (BattleManager_tFCEACDDF57A03838DD6DA1CD047BE7B048587EC7 * __this, DeckManager_t10E3F7A5FB2C74AB2B67F0ABDA437A036B9604E3 * ___deck0, const RuntimeMethod* method);
 // System.Collections.IEnumerator BattleManager::Startloadingimage()
@@ -8688,8 +8701,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* GetCard_GetCardData_mDB0556682
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CStartLoadingU3Ed__3__ctor_m44BDFD68740509B1252329E311245167EAB4DD70 (U3CStartLoadingU3Ed__3_t19BBECFBD6C634BDE058285EA624B200A240900A * __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method);
 // System.Collections.IEnumerator MenuManager::StartLoading()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* MenuManager_StartLoading_mDB6880B0FB3081C7BE9AB593BE34D3E7839F476C (MenuManager_tD52BB657312ED53913E423A985CACC86F900124C * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Screen_SetResolution_m1C17EB7EDF8CDA862338782353D53DFF6742DFC5 (int32_t ___width0, int32_t ___height1, bool ___fullscreen2, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<Enemy>()
 inline Enemy_tF0E5C8811BC93A523814C562C545DB3C1A755627 * Component_GetComponent_TisEnemy_tF0E5C8811BC93A523814C562C545DB3C1A755627_mBC0936621ECF96C215DEFE30C6AA90F4C1255005 (Component_t62FBC8D2420DA4BE9037AFE430740F6B3EECA684 * __this, const RuntimeMethod* method)
 {
@@ -9577,6 +9588,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BattleManager_Start_m24CD88FAE11BE69CCE1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
+		// Screen.SetResolution(1280, 720, false);
+		Screen_SetResolution_m1C17EB7EDF8CDA862338782353D53DFF6742DFC5(((int32_t)1280), ((int32_t)720), (bool)0, /*hidden argument*/NULL);
 		// LVsave.exitdeck = true;
 		IL2CPP_RUNTIME_CLASS_INIT(LVsave_t75DCC4BC700386849D2353F8AB7A4C00F289E463_il2cpp_TypeInfo_var);
 		((LVsave_t75DCC4BC700386849D2353F8AB7A4C00F289E463_StaticFields*)il2cpp_codegen_static_fields_for(LVsave_t75DCC4BC700386849D2353F8AB7A4C00F289E463_il2cpp_TypeInfo_var))->set_exitdeck_9((bool)1);
@@ -15472,6 +15485,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void explotion__ctor_m44EC92FE5688A1B8DC4D5A0
 	{
 		// public float damage = 50f;
 		__this->set_damage_4((50.0f));
+		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void table::Start()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void table_Start_m19E372BE5C4FAAF3CFD59FE8AE645DBEDC033206 (table_tDB309355BBE68EF226A1AC19B7E959E99280AC27 * __this, const RuntimeMethod* method)
+{
+	{
+		// Screen.SetResolution(1280, 720, false);
+		Screen_SetResolution_m1C17EB7EDF8CDA862338782353D53DFF6742DFC5(((int32_t)1280), ((int32_t)720), (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+}
+// System.Void table::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void table__ctor_mE9548D814E78AB95DEF71108A38DBB4D3E760853 (table_tDB309355BBE68EF226A1AC19B7E959E99280AC27 * __this, const RuntimeMethod* method)
+{
+	{
 		MonoBehaviour__ctor_mC0995D847F6A95B1A553652636C38A2AA8B13BED(__this, /*hidden argument*/NULL);
 		return;
 	}

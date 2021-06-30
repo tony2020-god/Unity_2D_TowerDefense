@@ -43,6 +43,7 @@ public class BattleManager : MonoBehaviour
 
     public void Start()
     {
+        Screen.SetResolution(1280, 720, false);
         LVsave.exitdeck = true;
         LVsave.icedead = false;
         LVsave.magiciandead = false;
@@ -51,6 +52,7 @@ public class BattleManager : MonoBehaviour
         LVsave.finalboss = false;
         CreateCard(DeckManager.instance);
         StartCoroutine(Startloadingimage());
+
     }
     
     public IEnumerator Startloadingimage()
