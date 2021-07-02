@@ -21,6 +21,7 @@ public class RoleMove : MonoBehaviour
     public GameObject explotion;
     public GameObject gathering;
     public GameObject sword;
+    public GameObject amo;
     public void Start()
     {
         instance = this;
@@ -104,6 +105,17 @@ public class RoleMove : MonoBehaviour
                             yield return new WaitForSeconds(2);
                             ani.SetBool("攻擊完", false);
                         }
+                        else if (gameObject.layer == LayerMask.NameToLayer("機器人"))
+                         {
+                        CanAttack = false;
+                        Stop = true;
+                        ani.SetBool("攻擊", true);
+                        Vector3 posFire = transform.position; //火球座標 = 屠龍者座標
+                        posFire.x += 0.62f;  //微調y軸
+                        posFire.y += 0.19f;  //微調y軸
+                        GameObject temp = Instantiate(amo, posFire, Quaternion.identity); //生成(物件,座標,角度)，Quaternion.identity 角度類型-零角度
+                        yield return new WaitForSeconds(AttackCD);
+                    }
                         else
                         {
                             CanAttack = false;
@@ -154,6 +166,17 @@ public class RoleMove : MonoBehaviour
                             yield return new WaitForSeconds(2);
                             ani.SetBool("攻擊完", false);
                         }
+                        else if (gameObject.layer == LayerMask.NameToLayer("機器人"))
+                         {
+                        CanAttack = false;
+                        Stop = true;
+                        ani.SetBool("攻擊", true);
+                        Vector3 posFire = transform.position; //火球座標 = 屠龍者座標
+                        posFire.x += 0.62f;  //微調y軸
+                        posFire.y += 0.19f;  //微調y軸
+                        GameObject temp = Instantiate(amo, posFire, Quaternion.identity); //生成(物件,座標,角度)，Quaternion.identity 角度類型-零角度
+                        yield return new WaitForSeconds(AttackCD);
+                    }
                         else
                         {
                             CanAttack = false;

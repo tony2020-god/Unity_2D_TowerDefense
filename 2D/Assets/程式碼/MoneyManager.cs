@@ -22,7 +22,7 @@ public class MoneyManager : MonoBehaviour
     [Header("派遣區")]
     public Transform trambattle;
 
-    public int maxmoney = 1000;
+    public int maxmoney = 100;
     public bool countmoney = false;
     public int moneyLV = 1;
     public int money = 0;
@@ -68,6 +68,9 @@ public class MoneyManager : MonoBehaviour
 
     public void Start()
     {
+        maxmoney = 100;
+        moneyLV = 1;
+        walletcost = 50;
         textmoney.text = money + "/" + maxmoney; //更新卡牌數量
         textmoneyLV.text = "LV" + moneyLV;
         textwalletcost.text = walletcost + "元";

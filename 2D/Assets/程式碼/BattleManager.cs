@@ -165,7 +165,7 @@ public class BattleManager : MonoBehaviour
         }
         else if(index ==8)
         {
-            Vector3 pos = new Vector2(-7.4f, -2.8f); //座標
+            Vector3 pos = new Vector2(-8f, -2.8f); //座標
             Quaternion qua = Quaternion.Euler(0, 0, 0); //角度  
             GameObject temp = Instantiate(data.Spawn[index - 1].Alliance, pos, qua); //生成
             temp.gameObject.GetComponent<Alliance>().hp = card.hp; //添加元件<盟友>.血量 = 卡片.血量   

@@ -118,7 +118,7 @@ MonoBehaviour:
   explotion: {fileID: 2391929877132868065, guid: f0e53763b77ceed4abc54cd850a565de, type: 3}
   gathering: {fileID: 1182474182728315520, guid: 57f25e5b16a669b48bef19747729b004, type: 3}
   sword: {fileID: 9112195854600835718, guid: b3332874af0a4254a982356116f53b8a, type: 3}
-  ice: {fileID: 2099044120596259391, guid: 2b9ebec9e96585e4191fe9060123729b, type: 3}
+  amo: {fileID: 1446055603189454335, guid: 4db75b14ac33eaf44a91b343f041793e, type: 3}
 --- !u!114 &-4611621629169550129
 MonoBehaviour:
   m_ObjectHideFlags: 0

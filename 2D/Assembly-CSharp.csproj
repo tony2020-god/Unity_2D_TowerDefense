@@ -88,6 +88,7 @@
     <Compile Include="Assets\程式碼\MenuManager.cs" />
     <Compile Include="Assets\程式碼\EnemySpawnManager.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Demo\WizDemo1.cs" />
+    <Compile Include="Assets\程式碼\amo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\EVil Wizard 2\License.txt" />

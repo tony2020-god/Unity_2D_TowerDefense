@@ -184,7 +184,7 @@ MonoBehaviour:
   speed: 0
   RoleLayer:
     serializedVersion: 2
-    m_Bits: 132416
+    m_Bits: 2229568
   Stop: 0
   damage: 0
   AttackCD: 0
