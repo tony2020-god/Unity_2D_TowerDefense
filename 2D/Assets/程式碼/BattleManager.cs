@@ -43,7 +43,7 @@ public class BattleManager : MonoBehaviour
 
     public void Start()
     {
-        Screen.SetResolution(1280, 720, false);
+        //Screen.SetResolution(1280, 720, true);
         LVsave.exitdeck = true;
         LVsave.icedead = false;
         LVsave.magiciandead = false;

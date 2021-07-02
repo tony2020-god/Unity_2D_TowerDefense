@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -9103870115650673246}
   - component: {fileID: -4611621629169550129}
   - component: {fileID: 6582167001072764301}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: "\u5973\u5FCD\u8005"
   m_TagString: "\u6211\u65B9\u89D2\u8272"
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6582167001072764303}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -182.2, y: -16.1, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.3}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -107,20 +107,18 @@ MonoBehaviour:
   speed: 0
   RoleLayer:
     serializedVersion: 2
-    m_Bits: 15472640
+    m_Bits: 129152
   Stop: 0
   damage: 0
   AttackCD: 0
   CanAttack: 0
   AttackDistance: 0
   dead: 0
-  Meteorite: {fileID: 5612270714003130171, guid: ee1e01a317aaa1045b2406dc2ba10a71,
-    type: 3}
-  explotion: {fileID: 2391929877132868065, guid: f0e53763b77ceed4abc54cd850a565de,
-    type: 3}
-  gathering: {fileID: 1182474182728315520, guid: 57f25e5b16a669b48bef19747729b004,
-    type: 3}
+  Meteorite: {fileID: 5612270714003130171, guid: ee1e01a317aaa1045b2406dc2ba10a71, type: 3}
+  explotion: {fileID: 2391929877132868065, guid: f0e53763b77ceed4abc54cd850a565de, type: 3}
+  gathering: {fileID: 1182474182728315520, guid: 57f25e5b16a669b48bef19747729b004, type: 3}
   sword: {fileID: 9112195854600835718, guid: b3332874af0a4254a982356116f53b8a, type: 3}
+  ice: {fileID: 2099044120596259391, guid: 2b9ebec9e96585e4191fe9060123729b, type: 3}
 --- !u!114 &-4611621629169550129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +172,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: e3236dd425e090f43896abdfe0d690c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -50,6 +50,6 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        Screen.SetResolution(1280, 720, false); //螢幕.設定解析度(寬,高,是否全螢幕) - EXE或網頁版(Build Settings)
+        //Screen.SetResolution(1280, 720, false); //螢幕.設定解析度(寬,高,是否全螢幕) - EXE或網頁版(Build Settings)
     }
 }

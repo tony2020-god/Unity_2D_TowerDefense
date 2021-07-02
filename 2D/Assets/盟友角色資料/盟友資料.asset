@@ -13,19 +13,11 @@ MonoBehaviour:
   m_Name: "\u76DF\u53CB\u8CC7\u6599"
   m_EditorClassIdentifier: 
   Spawn:
-  - Alliance: {fileID: 2286602710888461182, guid: 60ef408da458f174486fc6b1dd792daa,
-      type: 3}
-  - Alliance: {fileID: 6582167001072764303, guid: dac8a1a82b7e4b94d935edef399f7075,
-      type: 3}
-  - Alliance: {fileID: 7950542167190871575, guid: 857022d6a15c75c4b80a2808a57ae577,
-      type: 3}
-  - Alliance: {fileID: 3191956402122491635, guid: 47d7b832a89cdc0459d9aa2ffa8255cc,
-      type: 3}
-  - Alliance: {fileID: 6806029130260454198, guid: 6fc02753ccb12044fa4f5b45f4a73d36,
-      type: 3}
-  - Alliance: {fileID: 165413707943034928, guid: 1f82c9ef166c6e24d96d473499616131,
-      type: 3}
-  - Alliance: {fileID: 4254237758032422897, guid: 256b2beba02ad7f47b751cf26a114b6f,
-      type: 3}
-  - Alliance: {fileID: 8456760573603579265, guid: b21b0504e6c248340b3af1756afdb265,
-      type: 3}
+  - Alliance: {fileID: 2286602710888461182, guid: 60ef408da458f174486fc6b1dd792daa, type: 3}
+  - Alliance: {fileID: 6582167001072764303, guid: dac8a1a82b7e4b94d935edef399f7075, type: 3}
+  - Alliance: {fileID: 7950542167190871575, guid: 857022d6a15c75c4b80a2808a57ae577, type: 3}
+  - Alliance: {fileID: 3191956402122491635, guid: 47d7b832a89cdc0459d9aa2ffa8255cc, type: 3}
+  - Alliance: {fileID: 6806029130260454198, guid: 6fc02753ccb12044fa4f5b45f4a73d36, type: 3}
+  - Alliance: {fileID: 165413707943034928, guid: 1f82c9ef166c6e24d96d473499616131, type: 3}
+  - Alliance: {fileID: 4254237758032422897, guid: 256b2beba02ad7f47b751cf26a114b6f, type: 3}
+  - Alliance: {fileID: 4105362945620786469, guid: ebea5f8b8163f9a4ab9d9a1b45444e28, type: 3}

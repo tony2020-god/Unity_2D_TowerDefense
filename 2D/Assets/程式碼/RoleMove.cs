@@ -192,7 +192,7 @@ public class RoleMove : MonoBehaviour
                       {
                         CanAttack = false;
                         Stop = true;
-                        ani.SetBool("攻擊", true);
+                        ani.SetBool("攻擊", true);                    
                         yield return new WaitForSeconds(AttackCD);
                       }                     
                      }

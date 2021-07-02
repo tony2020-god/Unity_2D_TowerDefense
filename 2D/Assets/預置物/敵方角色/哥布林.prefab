@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7504337725015098880}
   - component: {fileID: 3276308653923053059}
   - component: {fileID: 4388258558510939874}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: "\u54E5\u5E03\u6797"
   m_TagString: "\u602A\u7269"
   m_Icon: {fileID: 0}
@@ -76,9 +76,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 4944230376442633554, guid: 048dae4a3e3ffa741b83654644b60a16,
-    type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 4944230376442633554, guid: 048dae4a3e3ffa741b83654644b60a16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,14 +157,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 706b8c2ea8bcf9848b37e25cb79df527, type: 2}
+  hp: 0
   dead: 0
   havewake: 0
   colliderzombe: {fileID: 0}
-  expolution: {fileID: 7824652723104486627, guid: a0057a032055c8046809ea6eda03a328,
-    type: 3}
+  expolution: {fileID: 7824652723104486627, guid: a0057a032055c8046809ea6eda03a328, type: 3}
   FireGod: {fileID: 6218336915241649809, guid: a3a6060ba63ae204fa4943954581424a, type: 3}
-  lastexpolution: {fileID: 4323995385040326484, guid: 2e32d3ede026a67408864bc58fb1201a,
-    type: 3}
+  lastexpolution: {fileID: 4323995385040326484, guid: 2e32d3ede026a67408864bc58fb1201a, type: 3}
   aud: {fileID: 4388258558510939874}
   shout: {fileID: 8300000, guid: 72fa4e67f76123a448049ec7174ef128, type: 3}
   explotion1: {fileID: 8300000, guid: 9786bafea7366b0478acd0b664ee74eb, type: 3}
@@ -185,21 +183,17 @@ MonoBehaviour:
   speed: 0
   RoleLayer:
     serializedVersion: 2
-    m_Bits: 33629184
+    m_Bits: 132416
   Stop: 0
   damage: 0
   AttackCD: 0
   CanAttack: 0
   AttackDistance: 0
   dead: 0
-  fireball: {fileID: 6848068644501729599, guid: c69b1a5f48531a54f81f320e6e79c2d7,
-    type: 3}
-  explotion: {fileID: 6210174522759095413, guid: 4691c0171fa388a4b890674b5bac297c,
-    type: 3}
-  firestone: {fileID: 6069329458739696763, guid: a9d6fb497962dfe44af3e86ae9a702e5,
-    type: 3}
-  thounder: {fileID: 2554505628650238872, guid: 129d0f3ac19016a459a3ba7462f31fac,
-    type: 3}
+  fireball: {fileID: 6848068644501729599, guid: c69b1a5f48531a54f81f320e6e79c2d7, type: 3}
+  explotion: {fileID: 6210174522759095413, guid: 4691c0171fa388a4b890674b5bac297c, type: 3}
+  firestone: {fileID: 6069329458739696763, guid: a9d6fb497962dfe44af3e86ae9a702e5, type: 3}
+  thounder: {fileID: 2554505628650238872, guid: 129d0f3ac19016a459a3ba7462f31fac, type: 3}
 --- !u!82 &4388258558510939874
 AudioSource:
   m_ObjectHideFlags: 0

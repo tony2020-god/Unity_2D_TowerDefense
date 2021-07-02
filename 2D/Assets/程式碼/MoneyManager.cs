@@ -41,8 +41,13 @@ public class MoneyManager : MonoBehaviour
         }
         if (money >= maxmoney)
         {
+             
              textmoney.text = maxmoney + "/" + maxmoney; //更新卡牌數量
-             countmoney = false;
+            money = maxmoney;
+            if (money ==maxmoney)
+            {
+                countmoney = false;
+            }
              RoleCost(GetCard.instance, trambattle, BattleManager.instance, BattleManager.instance, BattleManager.instance, BattleCard.instance);
         }           
         if(LVsave.isMinerSpawn == true)
