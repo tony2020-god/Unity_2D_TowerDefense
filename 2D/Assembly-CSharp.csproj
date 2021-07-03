@@ -83,12 +83,12 @@
     <Compile Include="Assets\程式碼\SpawnAlliance.cs" />
     <Compile Include="Assets\程式碼\EnemyMove.cs" />
     <Compile Include="Assets\程式碼\MoneyManager.cs" />
+    <Compile Include="Assets\程式碼\amo.cs" />
     <Compile Include="Assets\程式碼\SwordFire.cs" />
     <Compile Include="Assets\程式碼\EnemySpawnData.cs" />
     <Compile Include="Assets\程式碼\MenuManager.cs" />
     <Compile Include="Assets\程式碼\EnemySpawnManager.cs" />
     <Compile Include="Assets\Wizard - 2D Character\Demo\WizDemo1.cs" />
-    <Compile Include="Assets\程式碼\amo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\EVil Wizard 2\License.txt" />
